@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package collections;
+package main;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
  *
  * @author javie
  */
-public class Collections {
+public class main {
     static Scanner scan = new Scanner(System.in).useDelimiter("\n");
     static ArrayList<String> razas = new ArrayList<String>();
+    static Iterator<String> it;
     
     /**
      * @param args the command line arguments
@@ -24,7 +27,8 @@ public class Collections {
         guardarRaza();
         
         mostrarPerros();
-    
+ 
+        removerPerro();
     }
     
     public static void guardarRaza() {
@@ -66,11 +70,41 @@ public class Collections {
     }
     
     public static void mostrarPerros() {
+        Collections.sort(razas);
         System.out.println("");
         System.out.println("Listado de Perros");
-        for(String raza : Collections.razas) {
+        for(String raza : razas) {
             System.out.println(raza);
         }
+    }
+    
+    public static void removerPerro() {
+        System.out.println("");
+        String perroBuscar = "";
+        do {
+            System.out.println("Ingresa la raza de perro a borrar");
+            perroBuscar = scan.nextLine();
+        } while (perroBuscar.equals(""));
+        
+        it = razas.iterator();
+        
+        String aux = "";
+        boolean encontrado = false;
+        while(it.hasNext()) {
+            aux = it.next();
+            
+            if (aux.equals(perroBuscar)) {
+                System.out.println("Se removió la raza " + aux);
+                it.remove();
+                encontrado = true;
+            } 
+        }
+        
+        if (!encontrado) {
+            System.out.println("No se encontró la raza: " + perroBuscar);
+        }
+        
+        mostrarPerros();
     }
     
 }
