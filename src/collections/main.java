@@ -5,7 +5,9 @@
  */
 package collections;
 
-import collections.EP_4.ServicioPelicula;
+
+
+import collections.EP_5.ServicioPais;
 
 
 /**
@@ -18,19 +20,12 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ServicioPelicula sp = new ServicioPelicula();
+        ServicioPais sp = new ServicioPais();
         
-        sp.crearPeliculas();
+        sp.crearPaises();
         
-        sp.mostrarMayorAUnaHora();
         
-        sp.ordenarMayorAMenorDuracion();
-        
-        sp.ordenarMenorAMayorDuracion();
-        
-        sp.ordenarPorTitulo();
-        
-        sp.ordenarPorDirector();
+        sp.removerPais();
         
     }
 }
