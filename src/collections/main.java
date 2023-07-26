@@ -5,9 +5,8 @@
  */
 package collections;
 
+import collections.EP_6.ServicioProducto;
 
-
-import collections.EP_5.ServicioPais;
 
 
 /**
@@ -20,12 +19,13 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ServicioPais sp = new ServicioPais();
+        ServicioProducto sp = new ServicioProducto();
         
-        sp.crearPaises();
+        sp.introducirProductos();
         
+        sp.modificarPrecioProducto();
         
-        sp.removerPais();
+        sp.removerProducto();
         
     }
 }

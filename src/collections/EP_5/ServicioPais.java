@@ -5,12 +5,8 @@
  */
 package collections.EP_5;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -23,7 +19,7 @@ public class ServicioPais {
     Scanner scan = new Scanner(System.in).useDelimiter("\n");
     Iterator<Pais> it;
 
-    // Set<Pais> paises = new HashSet<Pais>();
+    // Set<Pais> paises = new TreeSet<Pais>();
      Set<Pais> paises = new TreeSet<>(Arrays.asList(
         new Pais("Uruguay"),
         new Pais("Argentina"),
