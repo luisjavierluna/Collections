@@ -5,7 +5,8 @@
  */
 package collections;
 
-import collections.EE_2.ServicioCantantes;
+import collections.EE_3.ServicioLibro;
+
 
 /**
  *
@@ -17,8 +18,28 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ServicioCantantes sc = new ServicioCantantes();
+       ServicioLibro sl = new ServicioLibro();
+       
+       // sl.crearLibros();
+       
+//        System.out.println("__________________________________________");
+//        sl.prestamo();
+//        
+//        System.out.println("__________________________________________");
+//        sl.prestamo();
+//        
+//        System.out.println("__________________________________________");
+//        sl.prestamo();
+       
+        System.out.println("__________________________________________");
+        sl.devolucion();
         
-        sc.menu();
+        System.out.println("__________________________________________");
+        sl.devolucion();
+        
+        System.out.println("__________________________________________");
+        sl.devolucion();
+       
+       
     }
 }   
