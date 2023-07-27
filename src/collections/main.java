@@ -5,41 +5,25 @@
  */
 package collections;
 
-import collections.EE_3.ServicioLibro;
-
+import collections.EE_4.ServicioCodigoPostal;
 
 /**
  *
  * @author javie
  */
 public class main {
-    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       ServicioLibro sl = new ServicioLibro();
+       ServicioCodigoPostal scp = new ServicioCodigoPostal();
        
-       // sl.crearLibros();
+       // scp.mostrarCodigos();
        
-//        System.out.println("__________________________________________");
-//        sl.prestamo();
-//        
-//        System.out.println("__________________________________________");
-//        sl.prestamo();
-//        
-//        System.out.println("__________________________________________");
-//        sl.prestamo();
+       // scp.introducirCodigos();
        
-        System.out.println("__________________________________________");
-        sl.devolucion();
-        
-        System.out.println("__________________________________________");
-        sl.devolucion();
-        
-        System.out.println("__________________________________________");
-        sl.devolucion();
+       // scp.buscarCodigo();
        
-       
+       scp.removerCodigos();
     }
 }   
